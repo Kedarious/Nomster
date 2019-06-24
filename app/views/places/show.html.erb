@@ -83,8 +83,12 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
       </div>
+      <div>
      <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+      </div>
+      <div>
      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+      </div> 
         <div class="modal-body">
           <%= f.input :caption %>
           <%= f.input :picture %>      
