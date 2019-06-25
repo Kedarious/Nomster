@@ -1,4 +1,4 @@
-class PhotosController < ApllicationController
+class PhotosController < AplicationController
 	before_action :authenticate_user!
 
 
