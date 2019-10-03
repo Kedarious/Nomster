@@ -26,13 +26,13 @@
   </style>
   </head>
   <body>
-  <div id="map"></div>
+  
 
   <% if @place.latitude.present? && @place.longitude.present? %>
 
   <script>
 
-    function initMap() {
+     function initMap() {
       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -50,13 +50,13 @@
 
 
 	<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCp5K-oV81ZGKgVsi9ko_Y19SvBCfbOxo&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj_TR7hp0MMZdgkXyojZFMSJtXJfU15ps&callback=initMap">
   </script>	
 
-  <div id="map"></div>	
-		
+  
 <% end %>
-
+  <div id="map"></div>
+  
 <br />	
 
 
@@ -82,7 +82,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <%= simple_form_for [@place, @comment] do |f| %>
+        <%= simple_form_for [@place, @comment] do |f| %>
         <div class="modal-body">
           <%= f.input :message, label: 'Comment' %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
